@@ -1,6 +1,6 @@
 baseURL = "https://krishna-pmr.ru/"
 title = "Кришна ПМР"
-theme = "ananke"
+theme = "hugo-felmdrav"
 
 defaultContentLanguage = "ru"
 defaultContentLanguageInSubdir = true
