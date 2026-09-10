@@ -1,0 +1,34 @@
+[[main]]
+name = "Главная"
+pageRef = "/"
+weight = 10
+
+[[main]]
+name = "Новости"
+pageRef = "/news/"
+weight = 20
+
+[[main]]
+name = "Лекции"
+pageRef = "/lectures/"
+weight = 40
+
+[[main]]
+name = "События"
+pageRef = "/events/"
+weight = 30
+
+[[main]]
+name = "Видео"
+pageRef = "/videos/"
+weight = 60
+
+[[main]]
+name = "Галерея"
+pageRef = "/gallery/"
+weight = 70
+
+[[main]]
+name = "О нас"
+pageRef = "/about/"
+weight = 80

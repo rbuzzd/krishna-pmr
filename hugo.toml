@@ -1,0 +1,49 @@
+baseURL = "https://krishna-pmr.ru/"
+title = "Кришна ПМР"
+theme = "ananke"
+
+defaultContentLanguage = "ru"
+defaultContentLanguageInSubdir = true
+enableRobotsTXT = true
+enableEmoji = true
+
+[pagination]
+  pagerSize = 12
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[sitemap]
+  filename = "sitemap.xml"
+
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"
+
+[params]
+  description = "Общество сознания Кришны в Приднестровье"
+  siteName = "Кришна ПМР"
+  header_bg_image = "/images/header-bg.jpg"
+
+[languages]
+  [languages.ru]
+    languageCode = "ru"
+    languageName = "Русский"
+    title = "Кришна ПМР"
+    weight = 1
+    contentDir = "content/ru"
+    timeZone = "Europe/Chisinau"
+
+  [languages.en]
+    languageCode = "en"
+    languageName = "English"
+    title = "Krishna PMR"
+    weight = 2
+    contentDir = "content/en"
+    timeZone = "Europe/Chisinau"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

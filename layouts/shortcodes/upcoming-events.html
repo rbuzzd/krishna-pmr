@@ -1,0 +1,26 @@
+{{- $limit := 3 -}}
+{{- with .Get "limit" }}{{ $limit = int . }}{{ end -}}
+{{- $events := where .Site.RegularPages "Section" "events" -}}
+{{- $events = where $events "Params.eventStart" "ne" nil -}}
+{{- $events = sort $events "Params.eventStart" "asc" -}}
+<div class="row g-4">
+{{- $count := 0 -}}
+{{- range $events -}}
+  {{- if and (lt $count $limit) (ge (time .Params.eventStart) now) -}}
+  <div class="col-md-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <div class="small text-muted">{{ time.Format "02.01.2006 15:04" (time .Params.eventStart) }}</div>
+        <h3 class="h5 card-title mt-2"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        {{ with .Params.location }}<div class="small">{{ . }}</div>{{ end }}
+        {{ with .Description }}<p class="card-text mt-2">{{ . }}</p>{{ end }}
+      </div>
+    </div>
+  </div>
+  {{- $count = add $count 1 -}}
+  {{- end -}}
+{{- end -}}
+</div>
+{{- if eq $count 0 }}
+<p>Новых событий пока нет. Следите за обновлениями.</p>
+{{- end -}}

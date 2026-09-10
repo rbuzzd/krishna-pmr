@@ -1,0 +1,34 @@
+[[main]]
+name = "Home"
+pageRef = "/"
+weight = 10
+
+[[main]]
+name = "News"
+pageRef = "/news/"
+weight = 20
+
+[[main]]
+name = "Lectures"
+pageRef = "/lectures/"
+weight = 40
+
+[[main]]
+name = "Events"
+pageRef = "/events/"
+weight = 30
+
+[[main]]
+name = "Videos"
+pageRef = "/videos/"
+weight = 60
+
+[[main]]
+name = "Gallery"
+pageRef = "/gallery/"
+weight = 70
+
+[[main]]
+name = "About"
+pageRef = "/about/"
+weight = 80

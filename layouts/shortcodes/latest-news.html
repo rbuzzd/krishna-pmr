@@ -1,0 +1,16 @@
+{{- $limit := 3 -}}
+{{- with .Get "limit" }}{{ $limit = int . }}{{ end -}}
+{{- $news := first $limit (where .Site.RegularPages "Section" "news") -}}
+<div class="row g-4">
+{{- range $news -}}
+  <div class="col-md-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <div class="small text-muted">{{ .Date.Format "02.01.2006" }}</div>
+        <h3 class="h5 card-title mt-2"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        {{ with .Description }}<p class="card-text">{{ . }}</p>{{ else }}<p class="card-text">{{ .Summary | plainify | truncate 140 }}</p>{{ end }}
+      </div>
+    </div>
+  </div>
+{{- end -}}
+</div>
