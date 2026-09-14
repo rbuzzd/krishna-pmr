@@ -24,7 +24,17 @@ enableEmoji = true
 [params]
   description = "Общество сознания Кришны в Приднестровье"
   siteName = "Кришна ПМР"
-  header_bg_image = "/images/header-bg.jpg"
+
+[params.navbar]
+  style = "header"
+
+[params.theme.header]
+  enabled = true
+  image = "images/header-bg.jpg"
+  alt_text = "Кришна ПМР"
+  show_text = true
+  text_on_image = true
+  overlay_alignment = "lb"
 
 [languages]
   [languages.ru]
