@@ -1,11 +1,13 @@
 # ВАЖНО:
-# Для production-аутентификации выбери backend после создания GitHub/Netlify/Decap Turbo setup.
-# Репозиторий и branch нужно заменить на свои значения.
+# Для production-аутентификации используется свой OAuth-сервер на Vercel
+# (decap-cms-oauth). base_url нужно заменить на URL развёрнутого OAuth-приложения.
 
 backend:
   name: github
   repo: rbuzzd/krishna-pmr
   branch: main
+  base_url: https://krishna-pmr-oauth.vercel.app
+  auth_endpoint: auth
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
